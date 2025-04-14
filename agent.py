@@ -47,7 +47,7 @@ def run_multimodal_agent(ctx: JobContext, participant: rtc.RemoteParticipant):
 
     assistant = MultimodalAgent(model=model)
     assistant.start(ctx.room, participant)
-    session= model.session[0]
+    session= model.sessions[0]
     session.conversation.item.create(
         llm.ChatMessage(
             role="user",
